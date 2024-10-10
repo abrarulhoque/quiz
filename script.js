@@ -3,15 +3,24 @@ showStep(currentStep)
 
 function showStep (step) {
   const steps = document.querySelectorAll('.step')
-  const indicators = document.querySelectorAll('.step-indicator')
+  const indicators = document.querySelectorAll('.nav-button')
   const car = document.getElementById('car') // Get the #car element
+
+  // Hide all steps and deactivate all indicators
+  steps.forEach((stepDiv, index) => {
+    stepDiv.classList.remove('active')
+  })
 
   // Show the active step
   steps[step].classList.add('active')
 
   // Update step indicators
   indicators.forEach((indicator, index) => {
-    indicator.classList.toggle('active', index <= step)
+    if (index === step) {
+      indicator.classList.add('active')
+    } else {
+      indicator.classList.remove('active')
+    }
   })
 
   // Update car image based on the step
@@ -39,6 +48,6 @@ function changeStep (n) {
     return false
   }
 
-  // Show new step
+  // Show new step and update indicators
   showStep(currentStep)
 }

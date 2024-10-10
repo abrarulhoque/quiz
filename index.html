@@ -113,37 +113,54 @@
             </div>
           </div>
           <!-- Timeline/Steps Navigation -->
+
           <div class="steps-indicator">
-            <button type="button" id="prevBtn" onclick="changeStep(-1)">
-              Previous
-            </button>
-            <div class="step-indicator active">
-              <span class="step-number">1</span>
-              <span class="step-label">Trips</span>
+            <div class="steps-inner">
+              <button type="button" id="prevBtn" onclick="changeStep(-1)">
+                Previous
+              </button>
+              <div>
+                <ul class="steps">
+                  <li class="nav-button step-1 active">
+                    <div class="circle-wrapper">
+                      <div class="circle">1</div>
+                    </div>
+                    <p>Trips</p>
+                  </li>
+                  <li class="line"></li>
+                  <li class="nav-button step-2">
+                    <div class="circle-wrapper">
+                      <div class="circle">2</div>
+                    </div>
+                    <p>Charger</p>
+                  </li>
+                  <li class="line"></li>
+                  <li class="nav-button step-3">
+                    <div class="circle-wrapper">
+                      <div class="circle">3</div>
+                    </div>
+                    <p>Passenger</p>
+                  </li>
+                  <li class="line"></li>
+                  <li class="nav-button step-4">
+                    <div class="circle-wrapper">
+                      <div class="circle">4</div>
+                    </div>
+                    <p>Features</p>
+                  </li>
+                  <li class="line"></li>
+                  <li class="nav-button step-5">
+                    <div class="circle-wrapper">
+                      <div class="circle">5</div>
+                    </div>
+                    <p>Results</p>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" id="nextBtn" onclick="changeStep(1)">
+                Next
+              </button>
             </div>
-            <div class="dot"></div>
-            <div class="step-indicator">
-              <span class="step-number">2</span>
-              <span class="step-label">Charger</span>
-            </div>
-            <div class="dot"></div>
-            <div class="step-indicator">
-              <span class="step-number">3</span>
-              <span class="step-label">Passenger</span>
-            </div>
-            <div class="dot"></div>
-            <div class="step-indicator">
-              <span class="step-number">4</span>
-              <span class="step-label">Features</span>
-            </div>
-            <div class="dot"></div>
-            <div class="step-indicator">
-              <span class="step-number">5</span>
-              <span class="step-label">Results</span>
-            </div>
-            <button type="button" id="nextBtn" onclick="changeStep(1)">
-              Next
-            </button>
           </div>
         </div>
       </div>
