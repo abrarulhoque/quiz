@@ -23,10 +23,46 @@ body {
   margin-left: 50px;
   margin-top: -15px;
 }
+
+#nextBtn:hover {
+  opacity: 0.5;
+  padding-left: 24px;
+  padding-right: 40px;
+}
+
 #prevBtn {
   margin-right: 50px;
   margin-top: -15px;
 }
+
+label {
+  display: flex;
+  align-items: center;
+  margin-top: 0px; /* Align label with checkbox/radio */
+  font-size: 16px;
+  color: #555;
+}
+
+label input {
+  margin-right: 10px; /* Space between checkbox/radio and label text */
+}
+/* Style for checkboxes and radio buttons */
+input[type='checkbox'],
+input[type='radio'] {
+  /* Increase the size */
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  /* Default appearance */
+  accent-color: initial; /* Keep default appearance */
+}
+
+/* Change the background to black when checked */
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+  accent-color: black; /* Change the color to black when checked */
+}
+
 .container {
   width: 100%;
   max-width: 800px;
@@ -224,4 +260,98 @@ button {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Existing Styles */
+
+/* Add responsive styles for mobile devices */
+@media only screen and (max-width: 768px) {
+  .inner-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .steps-inner {
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .form-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  header {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .car {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #car {
+    width: 100%;
+    height: auto;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .steps-indicator {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  ul.steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Hide existing next and previous buttons on mobile */
+  #prevBtn,
+  #nextBtn {
+    display: none !important;
+  }
+
+  /* Show new buttons on mobile */
+  .mobile-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .mobile-buttons button {
+    width: 48%; /* Adjust button width for mobile */
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .mobile-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+/* Add rules for desktop */
+@media only screen and (min-width: 769px) {
+  /* Hide the mobile buttons on desktop */
+  .mobile-buttons {
+    display: none;
+  }
 }
