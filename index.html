@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electrified Vehicle Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <header>
+        <h1>Find Your Match</h1>
+        <p>Which electrified vehicle fits you?</p>
+      </header>
+      <div class="inner-container">
+        <div class="container">
+          <div class="form-container">
+            <div class="car">
+              <img id="car" src="assets/1.png" alt="" />
+            </div>
+            <div class="form">
+              <form id="quizForm">
+                <!-- Step 1 -->
+                <div class="step active">
+                  <p>Step 1: Trips</p>
+                  <h2>Select all trips you take on a regular basis</h2>
+                  <label
+                    ><input type="checkbox" name="trips" value="dailyCommute" />
+                    Daily Commute</label
+                  ><br />
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="trips"
+                      value="localAdventures"
+                    />
+                    Local Adventures</label
+                  ><br />
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="trips"
+                      value="longRoadTrips"
+                    />
+                    Long Road Trips</label
+                  ><br />
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step">
+                  <p>Step 2: Charger</p>
+                  <h2>Select your charger preference</h2>
+                  <label
+                    ><input type="radio" name="charger" value="home" /> Home
+                    Charger</label
+                  ><br />
+                  <label
+                    ><input type="radio" name="charger" value="public" /> Public
+                    Charger</label
+                  ><br />
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step">
+                  <p>Step 3: Passenger</p>
+                  <h2>How many passengers do you typically have?</h2>
+                  <label
+                    ><input type="radio" name="passenger" value="1" /> 1</label
+                  ><br />
+                  <label
+                    ><input type="radio" name="passenger" value="2-3" />
+                    2-3</label
+                  ><br />
+                  <label
+                    ><input type="radio" name="passenger" value="4+" /> 4 or
+                    more</label
+                  ><br />
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step">
+                  <p>Step 4: Features</p>
+                  <h2>Select the features you're looking for</h2>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="features"
+                      value="autonomous"
+                    />
+                    Autonomous Driving</label
+                  ><br />
+                  <label
+                    ><input type="checkbox" name="features" value="luxury" />
+                    Luxury Interior</label
+                  ><br />
+                  <label
+                    ><input type="checkbox" name="features" value="offRoad" />
+                    Off-Road Capability</label
+                  ><br />
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step">
+                  <h2>Step 5: Results</h2>
+                  <p>
+                    Thank you for completing the quiz! We will show your vehicle
+                    match soon.
+                  </p>
+                </div>
+
+                <div class="navigation"></div>
+              </form>
+            </div>
+          </div>
+          <!-- Timeline/Steps Navigation -->
+          <div class="steps-indicator">
+            <button type="button" id="prevBtn" onclick="changeStep(-1)">
+              Previous
+            </button>
+            <div class="step-indicator active">
+              <span class="step-number">1</span>
+              <span class="step-label">Trips</span>
+            </div>
+            <div class="dot"></div>
+            <div class="step-indicator">
+              <span class="step-number">2</span>
+              <span class="step-label">Charger</span>
+            </div>
+            <div class="dot"></div>
+            <div class="step-indicator">
+              <span class="step-number">3</span>
+              <span class="step-label">Passenger</span>
+            </div>
+            <div class="dot"></div>
+            <div class="step-indicator">
+              <span class="step-number">4</span>
+              <span class="step-label">Features</span>
+            </div>
+            <div class="dot"></div>
+            <div class="step-indicator">
+              <span class="step-number">5</span>
+              <span class="step-label">Results</span>
+            </div>
+            <button type="button" id="nextBtn" onclick="changeStep(1)">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
